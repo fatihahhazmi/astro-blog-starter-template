@@ -8,16 +8,81 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={UNO PAGE} description={MY MICRO BLOG} />
+		<BaseHead title="UNO PAGE" description="MY MICRO BLOG" />
+		<style>
+			main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 4rem 1rem;
+				text-align: center;
+				min-height: 50vh;
+			}
+
+			.frog-avatar {
+				width: 140px;
+				height: 140px;
+				border-radius: 50%;
+				border: 3px solid #22c55e;
+				margin-bottom: 1.5rem;
+				object-fit: cover;
+				transition: transform 0.4s ease;
+			}
+
+			.frog-avatar:hover {
+				transform: scale(1.1) rotate(5deg);
+			}
+
+			h1 {
+				font-family: 'Courier New', Courier, monospace;
+				font-size: 1.5rem;
+				color: #166534;
+				margin-bottom: 2rem;
+			}
+
+			.link-container {
+				display: flex;
+				gap: 20px;
+			}
+
+			.simple-link {
+				color: #22c55e;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 1.1rem;
+				padding: 5px 15px;
+				border: 1px solid transparent;
+				border-radius: 6px;
+				transition: all 0.2s ease;
+			}
+
+			.simple-link:hover {
+				border-color: #22c55e;
+				background: #f0fdf4;
+			}
+
+			.admin-dot {
+				margin-top: 4rem;
+				color: #eee;
+				text-decoration: none;
+				font-size: 0.7rem;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>heheheh</h1>
-			<p>
-				 This blog serves as a lightweight, minimally-styled.
-			</p>
+			<img src="/me.png" alt="Frog" class="frog-avatar" />
+
+			<h1>hi</h1>
 			
+			<div class="link-container">
+				<a href="/blog" class="simple-link">blog</a>
+				<a href="/about" class="simple-link">about</a>
+			</div>
+
+			<a href="/admin" class="admin-dot">.</a>
 		</main>
 		<Footer />
 	</body>
